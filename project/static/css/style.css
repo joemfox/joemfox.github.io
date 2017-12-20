@@ -2,8 +2,12 @@ body{
   background-color: #fafafa;
 }
 
+.section{
+	margin: 40px 15px;
+}
+
 .large-image{
-	max-width: 700px;
+	width:100%;
 	margin:auto;
 	position: relative;
 }
@@ -13,7 +17,7 @@ body{
 	color: #666;
 }
 
-.image-container > img, .image-container > video{
+.image-container > a > img, .image-container > a > video, .image-container > video{
 	width:100%;
 }
 
@@ -36,4 +40,24 @@ body{
 
 .list-item{
 	flex: 1 0 30%;
+	margin: 15px 20px;
+}
+
+.date span{
+	text-transform: uppercase;
+	font-size:12px;
+}
+
+.headline{
+	display: block;
+	font-size:19px;
+	color:#222;
+	font-weight: 600;
+	line-height:21px;
+	margin:7px 0 10px;
+}
+
+.project-thumb figcaption{
+	margin-top:6px;
+	font-style: italic;
 }

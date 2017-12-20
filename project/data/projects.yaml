@@ -1,23 +1,8 @@
-- headline: >
-    A week in the life of P‑22, the big cat who shares Griffith Park with millions of people
-  description: >
-    xxx
-  date: 2017-02-08
-  img: img/p22.png
-  url: http://www.latimes.com/projects/la-me-griffith-park-mountain-lion/
-
-- headline: >
-    Why the 2017 fire season has been one of California’s worst
-  description: >
-    xxx
-  date: 2017-10-13
-  img: img/fires-sat.png
-  url: http://www.latimes.com/projects/la-me-california-fire-seasons/
 
 - headline: >
     Before and after: Where the Thomas fire destroyed buildings in Ventura
   description: >
-    xxx
+    We used satellite imagery to determine which buildings had been destroyed in a fire in Ventura.
   date: 2017-12-06
   img: img/fire-buildings.jpg
   url: http://www.latimes.com/projects/la-me-socal-fires-destroyed-structures/
@@ -25,7 +10,71 @@
 - headline: >
     Despite a record number of strikeouts, Dodgers’ pitchers fell short
   description: >
-    xxx
+    This scatter plot was made with the vector mapping library Tangram — a quick way to render a large number of data points.
   date: 2017-11-02
   img: img/pitch-scatter.png
   url: http://www.latimes.com/projects/la-sp-dodgers-strikeouts/
+
+- headline: >
+    Why the 2017 fire season has been one of California’s worst
+  description: >
+    Using Landsat imagery, I showed how fire-stricken regions of California had started the year lush and green but dried out by the autumn.
+  date: 2017-10-13
+  img: img/fires-sat.png
+  url: http://www.latimes.com/projects/la-me-california-fire-seasons/
+
+- headline: >
+    A week in the life of P‑22, the big cat who shares Griffith Park with millions of people
+  description: >
+    For this project, I created a 3-D model of Griffith Park using USGS and NOAA data and animated it to show the mountain lion's movement throughout the story.
+  date: 2017-02-08
+  img: img/p22.png
+  url: http://www.latimes.com/projects/la-me-griffith-park-mountain-lion/
+  
+- headline: >
+    Did your neighborhood vote to _____________?
+  description: >
+    Months of data collection went into this project, which was the most comprehensive election results map available for California after the November 2016 election.
+  date: 2016-11-10
+  img: img/election.png
+  url: http://www.latimes.com/projects/la-pol-ca-california-neighborhood-election-results/
+
+- headline: >
+    A web of campaign contributors
+  description: >
+    This 3-D visualization of a network of political donors in Los Angeles was part of a Loeb Award-winning story.
+  date: 2016-10-30
+  video: video/seabreeze
+  url: http://www.latimes.com/projects/la-me-seabreeze-donations-interactive/ 
+
+- headline: >
+    Pitch by pitch: How Clayton Kershaw dominates hitters
+  description: >
+    I wanted to show what it's like for a batter to face one of baseball's greatest pitchers, so I created a 3-D visualization of real Clayton Kershaw pitches from the first half of the 2016 season (this was published at midseason).
+  date: 2016-07-11
+  img: img/kershaw.png
+  url: http://www.latimes.com/projects/la-sp-kershaw-2016-pitch-by-pitch/
+
+- headline: >
+    Every shot Kobe Bryant ever took. All 30,699 of them
+  description: >
+    We plotted every shot Kobe Bryant took from the floor in his 20 years in the NBA. Some of this project's code is <a href="https://github.com/datadesk/kobe-every-shot-ever">on GitHub.</a>
+  date: 2016-04-14
+  img: img/kobe.png
+  url: http://graphics.latimes.com/kobe-every-shot-ever/
+
+- headline: >
+    When would it be without leap years?
+  description: >
+    I made a 3-D simulation of the way the calendar year lags behind the Earth's orbit of the sun as part of this explainer on leap years.
+  date: 2016-02-25
+  img: img/leap-year.gif
+  url: http://graphics.latimes.com/leap-year-2016/
+
+- headline: >
+    L.A. Rams throwback throw down
+  description: >
+    A simulation game that lets you put historical NFL Rams teams head-to-head. Plus a mathy explainer!
+  date: 2016-02-02
+  img: img/rams-sim.gif
+  url: http://graphics.latimes.com/nfl-rams-football-simulator/

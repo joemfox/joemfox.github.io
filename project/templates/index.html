@@ -1,26 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div class="image-container large-image">
-	<video autoplay muted loop poster="static/video/napa_fires-2.jpg">
-		<source src="static/video/napa_fires-2.webm" type="video/webm">
-		<source src="static/video/napa_fires-2.webm" type="video/mp4">
-	</video>
-	<figcaption>A time-lapse of GOES imagery from the night of October 10, 2017, showing smoke from the wildfires that broke out in Northern California that night.</figcaption>
+<div class="section">
+	<h1>Hello</h1>
+	<p class="description">I'm Joe Fox, a journalist and developer at the <i>Los Angeles Times</i>. Below are examples of my work. Follow me <a href="https://twitter.com/joemfox">on Twitter</a>.</p>
+	<div class="image-container large-image">
+		<video autoplay muted loop poster="static/video/napa_fires-2.jpg">
+			<source src="static/video/napa_fires-2.webm" type="video/webm">
+			<source src="static/video/napa_fires-2.mp4" type="video/mp4">
+		</video>
+		<figcaption>A time-lapse of GOES imagery from the night of October 10, 2017, showing smoke from the wildfires that broke out in Northern California that night.</figcaption>
+	</div>
 </div>
 
-<h2>Work</h2>
+<div class="section">
+	<h2>Work</h2>
 
-<div class="project-list">
-  {% for project in projects %}
-      <div class="list-item">
-      	<a href="{{ project.url }}">
-          {{ project.headline }}
-		</a>
-		<div class="image-container medium-image">
-			<img src="{{ url_for('static', filename=project.img) }}" alt="">
-		</div>
-	  </div>
-  {% endfor %}
+	<div class="project-list">
+	  {% for project in projects %}
+	      <div class="list-item">
+	      	<div class="date">
+	      		<span>{{project.date.strftime('%B %-d, %Y')}}</span>
+	      	</div>
+	      	<a href="{{ project.url }}">
+	          <span class="headline">{{ project.headline }}</span>
+		    </a>
+			<div class="project-thumb image-container medium-image">
+				<a href="{{ project.url }}">
+					{% if project.img %}
+						<img src="{{ url_for('static', filename=project.img) }}" alt="">
+					{% else %}
+					<video autoplay muted loop poster="static/{{project.video}}.jpg">
+						<source src="static/{{project.video}}.webm" type="video/webm">
+						<source src="static/{{project.video}}.mp4" type="video/mp4">
+					</video>	
+					{% endif %}
+				</a>
+				<figcaption>{{project.description|safe}}</figcaption>
+			</div>
+		  </div>
+	  {% endfor %}
+	</div>
+</div>
+
+<div class="section">
+	<h2>Twitter bots</h2>
+	<p class="description">I maintain a small collection of Twitter bots that I created as programming challenges.</p>
+	<ul>
+		<li><a href="https://twitter.com/burritopatents"><b>@burritopatents</b></a>: creates burrito-related patent names</li>
+		<li><a href="https://twitter.com/SombreroWatch"><b>@sombrerowatch</b></a>: alerts followers when baseball players achieve the ultimate failure — a golden sombero (four strikeouts in one game)</li>
+		<li><a href="https://twitter.com/andromedabot"><b>@andromedabot</b></a>: posts a small portion of the largest image taken by the Hubble space telescope</li>
+		<li><a href="https://twitter.com/colorschemez"><b>@colorschemez</b></a>: creates new, mostly ugly color combinations with stupid names</li>
+	</ul>
 </div>
 {% endblock %}
