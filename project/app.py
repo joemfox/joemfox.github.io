@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import os
-import csv
 import yaml
 from flask import Flask
 # from flask_flatpages import FlatPages
@@ -12,4 +11,3 @@ app.config.from_pyfile('settings.py')
 freezer = Freezer(app)
 
 projects = yaml.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'data/projects.yaml')))
-print projects

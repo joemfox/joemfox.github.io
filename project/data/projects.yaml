@@ -1,6 +1,31 @@
-- test:
-  name: test name
-  date: 2017-04-01
-- test2:
-  name: test name 2
-  date: 2016-08-08
+- headline: >
+    A week in the life of P‑22, the big cat who shares Griffith Park with millions of people
+  description: >
+    xxx
+  date: 2017-02-08
+  img: img/p22.png
+  url: http://www.latimes.com/projects/la-me-griffith-park-mountain-lion/
+
+- headline: >
+    Why the 2017 fire season has been one of California’s worst
+  description: >
+    xxx
+  date: 2017-10-13
+  img: img/fires-sat.png
+  url: http://www.latimes.com/projects/la-me-california-fire-seasons/
+
+- headline: >
+    Before and after: Where the Thomas fire destroyed buildings in Ventura
+  description: >
+    xxx
+  date: 2017-12-06
+  img: img/fire-buildings.jpg
+  url: http://www.latimes.com/projects/la-me-socal-fires-destroyed-structures/
+
+- headline: >
+    Despite a record number of strikeouts, Dodgers’ pitchers fell short
+  description: >
+    xxx
+  date: 2017-11-02
+  img: img/pitch-scatter.png
+  url: http://www.latimes.com/projects/la-sp-dodgers-strikeouts/

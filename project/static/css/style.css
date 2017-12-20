@@ -1,3 +1,39 @@
-html{
+body{
   background-color: #fafafa;
+}
+
+.large-image{
+	max-width: 700px;
+	margin:auto;
+	position: relative;
+}
+
+.image-container figcaption{
+	font-size: 13px;
+	color: #666;
+}
+
+.image-container > img, .image-container > video{
+	width:100%;
+}
+
+.medium-image{
+	max-width: 400px;
+	margin:auto;
+	position: relative;
+}
+
+.content{
+	max-width:850px;
+	margin:auto;
+}
+
+.project-list{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+}
+
+.list-item{
+	flex: 1 0 30%;
 }

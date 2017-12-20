@@ -1,15 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="image-container large-image">
+	<video autoplay muted loop poster="static/video/napa_fires-2.jpg">
+		<source src="static/video/napa_fires-2.webm" type="video/webm">
+		<source src="static/video/napa_fires-2.webm" type="video/mp4">
+	</video>
+	<figcaption>A time-lapse of GOES imagery from the night of October 10, 2017, showing smoke from the wildfires that broke out in Northern California that night.</figcaption>
+</div>
+
 <h2>Work</h2>
 
-<ul class="project-list">
+<div class="project-list">
   {% for project in projects %}
-      <div>
-      	<a href="{{ project.link }}">
-          {{ project.name }}
+      <div class="list-item">
+      	<a href="{{ project.url }}">
+          {{ project.headline }}
 		</a>
+		<div class="image-container medium-image">
+			<img src="{{ url_for('static', filename=project.img) }}" alt="">
+		</div>
 	  </div>
   {% endfor %}
-</ul>
+</div>
 {% endblock %}
