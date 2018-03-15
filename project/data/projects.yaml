@@ -31,6 +31,14 @@
   url: http://www.latimes.com/projects/la-me-california-fire-seasons/
 
 - headline: >
+    Don't waste your time waiting in line at Disneyland
+  description: >
+    We used data analysis to come up with strategies for riding the best rides at Disneyland without waiting forever in line, then went to Disneyland and tested them out. I created CSS-only charts for each ride using Django templating.
+  date: 2017-07-12
+  img: img/disneyland.png
+  url: http://www.latimes.com/disneyland
+
+- headline: >
     A week in the life of P‑22, the big cat who shares Griffith Park with millions of people
   description: >
     For this project, I created a 3-D model of Griffith Park using USGS and NOAA data and animated it to show the mountain lion's movement throughout the story.
@@ -49,7 +57,7 @@
 - headline: >
     A web of campaign contributors
   description: >
-    This 3-D visualization of a network of political donors in Los Angeles was part of a Loeb Award-winning story.
+    This 3-D visualization of a network of political donors in Los Angeles was part of a Loeb Award-winning package.
   date: 2016-10-30
   video: video/seabreeze
   url: http://www.latimes.com/projects/la-me-seabreeze-donations-interactive/ 
