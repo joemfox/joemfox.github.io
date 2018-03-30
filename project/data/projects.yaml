@@ -1,4 +1,12 @@
 - headline: >
+    How to find shade at Dodger Stadium
+  description: >
+    Using a 3-D model of Dodger Stadium and sun position math, I simulated the shadows throughout the season to help fans pick a seat that wouldn't be uncomfortable in the Los Angeles summer. I also wrote an <a href="http://www.latimes.com/la-sp-dodger-stadium-shade-explainer-20180322-story.html">explainer post</a>.
+  date: 2018-03-22
+  img: img/dodger-stadium-small.gif
+  url: http://www.latimes.com/projects/la-sp-dodger-stadium-shadiest-seats/
+
+- headline: >
     The Thomas fire: 40 days of devastation
   description: >
     I built a 3-D model to tell the story the largest wildfire in California history. The project used satellite imagery and three.js to create an immersive experience.
