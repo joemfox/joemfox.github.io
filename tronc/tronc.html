@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<title>tronc</title>
+<style>
+html{
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+body{
+	position: relative;
+	margin: 0;
+	min-height: 100%;
+	width: 100%;
+}
+#graphic{
+	position: absolute;
+	width:100%;
+	height:100%;
+}
+
+#star{
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+}
+
+</style>
+</head>
+<body>
+<div id="graphic">
+    <!-- <div id="star">★</div> -->
+</div>
+</body>
+<script type="text/javascript" src="three.js"></script>
+<script type="text/javascript" src="OrbitControls.js"></script>
+<script type="text/javascript" src="ColladaLoader2.js"></script>
+<script type="text/javascript">
+var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+var container, canvaswidth, canvasheight, scene, aspect, camera, renderer, controls, particles, particles, particleGeometry, particleCount, pMaterial, clock, tronc;
+
+var init = function(){
+    container = $("#graphic");
+    canvaswidth = container.innerWidth();
+    canvasheight = container.innerHeight();
+
+    scene = new THREE.Scene();
+    clock = new THREE.Clock();
+
+    aspect = canvaswidth / canvasheight;
+
+    camera = new THREE.PerspectiveCamera( 30, aspect, 100, 1000000 );
+    camera.position.x = 0;
+    camera.position.y = -8000;
+    camera.position.z = 0;
+    camera.up = new THREE.Vector3(0,0,1);
+
+
+    var hemisphere = new THREE.HemisphereLight( 0x888888,0xeeeeee,0.9 );
+    // hemisphere.castShadow = true;
+    scene.add(hemisphere)
+
+
+
+    function onWindowResize( event ) {
+        renderer.setSize( container.innerWidth(), container.innerHeight() );
+        camera.aspect = container.innerWidth() / container.innerHeight();
+        camera.updateProjectionMatrix();
+    }
+
+
+    renderer = new THREE.WebGLRenderer({alpha:false, antialias:!mobile ? true : false
+    // , preserveDrawingBuffer: true 
+    });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize( canvaswidth, canvasheight );
+    container.append( renderer.domElement );
+
+    window.addEventListener( 'resize', onWindowResize, false );
+
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.position = new THREE.Vector3(0,0,800);
+    controls.target = new THREE.Vector3(0,0,0)
+
+    particleCount = !mobile ? 50000 : 10000;
+    particleGeometry = new THREE.Geometry();
+    pMaterial = new THREE.PointsMaterial({
+        color: "rgb(255,255,255)",
+        size: 50,
+        // depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        transparent: true
+        // opacity: 0.6
+        // map: new THREE.TextureLoader().load("{{ STATIC_URL }}img/money.png")
+    });
+    tMaterial = new THREE.PointsMaterial({
+        color: 0xd46700,
+        size: 200,
+        depthTest: true,
+        blending: THREE.AdditiveBlending,
+        transparent: true
+        // opacity: 0.6
+        // map: new THREE.TextureLoader().load("{{ STATIC_URL }}img/money.png")
+    });
+
+    troncparticleCount = 120;
+    troncparticleGeometry = new THREE.Geometry();
+
+var texload = new THREE.TextureLoader().load("img/tronc-no-bits.png",function(texture){
+
+    var loader = new THREE.ColladaLoader();
+        // loader.options.convertUpAxis = true;
+        loader.load("tronc-path.dae",function(collada){
+                tronc = collada.scene;
+    	                tronc.scale.set(10,10,10)
+    	                tronc.rotation.x += Math.PI/2
+    	                // tronc.rotation.y += Math.PI
+    	                tronc.position.x -= 1600
+    	                tronc.position.y += 550
+                 tronc.traverse( function ( child ) {
+
+                    if ( child instanceof THREE.Mesh ) {
+                        child.geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, -33, 15 ) );
+                        // var material = new THREE.MeshBasicMaterial();
+                        // material.map = texture;
+                        if(child.material.map != -1){
+                            console.log(child.material)
+                            
+                            child.material.polygonOffset = true;
+                            child.material.polygonOffsetFactor = -0.1;
+                        }
+                        else{
+                            child.material.depthTest = false;
+                        }
+                        // child.geometry.computeFaceNormals();
+                        // child.geometry.computeVertexNormals();
+                        // child.geometry.computeBoundingBox();
+                        // child.material.depthTest = false;
+                    }
+
+                } );
+                tronc.sine = 0;
+                scene.add(tronc);
+
+                $('#graphic').on('click',function(){
+                    spin(tronc);
+                });
+
+                $('#stars').on('click',function(){
+                    stars();
+                })
+
+                animate();
+
+                } );
+    });
+
+
+}
+
+var draw = function(){
+
+}
+
+var particleDraw = function(count){
+    particleGeometry.vertices = [];
+	for(x = 0; x < count; x++){
+
+        var particle = new THREE.Vector3((Math.random()*20000)*(Math.random() <= 0.5 ? -1 : 1),(Math.random()*20000)*(Math.random() <= 0.5 ? -1 : 1),(Math.random()*20000)*(Math.random() <= 0.5 ? -1 : 1));
+        particleGeometry.vertices.push(particle);
+
+    }
+
+	particles = new THREE.Points(particleGeometry, pMaterial);
+    particles.sortParticles = true;
+    particles.dynamic = true;
+    scene.add(particles);
+
+    particles.update = function(){
+        for(var i in this.geometry.vertices){
+            var particle = this.geometry.vertices[i];
+            particle.x -= 10;
+            if(particle.x < -20000){
+            	particle.x = 20000;
+            }
+        }
+        this.geometry.verticesNeedUpdate = true;
+    }
+}
+
+var troncparticleDraw = function(){
+	for(x = 0; x < troncparticleCount; x++){
+
+        var troncparticle = new THREE.Vector3((Math.random()*10000)-9000,500,(Math.random()*800)-175);
+        troncparticle.speed = (Math.random()*50)+30;
+        troncparticleGeometry.vertices.push(troncparticle);
+
+    }
+
+	troncparticles = new THREE.Points(troncparticleGeometry, tMaterial);
+    troncparticles.sorttroncParticles = true;
+    troncparticles.dynamic = true;
+    scene.add(troncparticles);
+
+    troncparticles.update = function(){
+        for(var i in this.geometry.vertices){
+            var troncparticle = this.geometry.vertices[i];
+            troncparticle.x -= troncparticle.speed;
+            if(troncparticle.x < -10000){
+            	troncparticle.x = -1000;
+            	troncparticle.z = tronc.position.z + ((Math.random()*800)-175);
+            }
+        }
+        this.geometry.verticesNeedUpdate = true;
+    }
+}
+
+var spin = function(tronc){
+    tronc.rotation.x += Math.PI/30;
+}
+
+var stars = function(num){
+    // particleCount += 5000;
+    particleDraw(5000);
+}
+
+function render(){
+    var delta = clock.getDelta();
+    tronc.sine += delta;
+    tronc.position.z = (Math.sin(tronc.sine) * 150)
+
+    // console.log(tronc.rotation.x % (Math.PI))
+    if(((tronc.rotation.x - Math.PI/2) % (Math.PI*2)).toFixed(1) != 0.0){
+        tronc.rotation.x += Math.PI/30;
+    }
+
+    particles.update();
+    troncparticles.update();
+    controls.update();
+    renderer.render(scene, camera);
+};
+
+function animate(){
+    render();
+    requestAnimationFrame(animate);
+}
+
+init();
+draw();
+particleDraw(particleCount);
+troncparticleDraw();
+
+
+</script>
