@@ -1,4 +1,2 @@
-title: Joe Fox
-date: 2017-12-20 12:00:00
-
-lafsahflkjahsf
+title: fox.computer
+date: 2019-03-01 12:00:00

@@ -1,4 +1,36 @@
 - headline: >
+    These wealthy neighborhoods delivered Democrats the House majority
+  description: >
+    We published an analysis of precinct-level results and analysis very quickly after the 2018 midterm election thanks to a lot of prep work, including my data processing setup for all the House districts we were interested in. I worked the overnight shift to process results as they came in.
+  date: 2018-11-09
+  img: img/precincts.png
+  url: https://www.washingtonpost.com/graphics/2018/politics/midterm-election-precinct-results
+  
+- headline: >
+    BORDERLINE: Navigating the invisible boundary and physical barriers that define the U.S.-Mexico border
+  description: >
+    This 3-D scroll-driven map was a really fun project to work on. The basic framework of a slippy 3-D tiled map was built when I joined the project, but I wrote a lot of the interaction, motion and rendering code and took over the project as the lead developer partway through.
+  date: 2018-10-17
+  img: img/borderline.png
+  url: https://www.washingtonpost.com/graphics/2018/national/us-mexico-border-flyover
+
+- headline: >
+    Tracking Florence's deluge
+  description: >
+    All thanks to Adam Pearce for <a href="https://roadtolarissa.com/hurricane/">this great tutorial</a>, which was helpful despite the unique wrinkles I ran into while building this rainfall map on a very tight deadline. It updated live as the hurricane passed through.
+  date: 2018-09-14
+  img: img/rainfall.png
+  url: https://www.washingtonpost.com/graphics/2018/national/hurricane-florence-hits-carolina-coast
+
+- headline: >
+    Just how weak is this year’s Home Run Derby field?
+  description: >
+    Gabriel Florit and I created these 3-D home run arc plots in Blender. It was a fun exercise and we made animated versions for social media that I tweeted during the Derby.
+  date: 2018-07-16
+  img: img/derby.png
+  url: https://www.washingtonpost.com/graphics/2018/sports/home-run-derby-lineup
+
+- headline: >
     How to find shade at Dodger Stadium
   description: >
     Using a 3-D model of Dodger Stadium and sun position math, I simulated the shadows throughout the season to help fans pick a seat that wouldn't be uncomfortable in the Los Angeles summer. I also wrote an <a href="http://www.latimes.com/la-sp-dodger-stadium-shade-explainer-20180322-story.html">explainer post</a>.
