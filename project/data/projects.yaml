@@ -1,3 +1,21 @@
+- headline: How terror detonated with precision across Sri Lanka 
+  description: This breaking news map was a one-day Mapbox project to explain the Easter Sunday bombings in Sri Lanka.
+  img: img/srilanka.jpg
+  url: https://www.washingtonpost.com/graphics/2019/world/sri-lanka-explosions/
+  date: 2019-04-25
+
+- headline: Mueller report offers clues to what’s behind the redactions
+  description: Rather than simply showing the number of redactions, we analyzed the Mueller report and added context to give some idea of what the redactions were about.
+  img: img/mueller.png
+  url: https://www.washingtonpost.com/graphics/2019/politics/mueller-report-redactions/
+  date: 2019-04-19
+
+- headline: What remains of Bears Ears
+  description: A months-long project, I was involved in capturing the drone imagery, creating the petroglyph panorama, web development, reporting and writing this story about cultural and archaeological sites in the former Bears Ears National Momument.
+  img: img/bearsears.jpg
+  url: https://www.washingtonpost.com/graphics/2019/national/bears-ears/
+  date: 2019-04-02
+
 - headline: >
     These wealthy neighborhoods delivered Democrats the House majority
   description: >
