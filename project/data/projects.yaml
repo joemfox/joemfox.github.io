@@ -25,7 +25,7 @@
 
 - headline: Mueller report offers clues to what’s behind the redactions
   description: Rather than simply showing the number of redactions, we analyzed the Mueller report and added context to give some idea of what the redactions were about.
-  img: img/mueller.png
+  img: img/mueller.jpg
   url: https://www.washingtonpost.com/graphics/2019/politics/mueller-report-redactions/
   date: 2019-04-19
 
@@ -40,7 +40,7 @@
   description: >
     We published an analysis of precinct-level results and analysis very quickly after the 2018 midterm election thanks to a lot of prep work, including my data processing setup for all the House districts we were interested in. I worked the overnight shift to process results as they came in.
   date: 2018-11-09
-  img: img/precincts.png
+  img: img/precincts.jpg
   url: https://www.washingtonpost.com/graphics/2018/politics/midterm-election-precinct-results
   
 - headline: >
@@ -48,7 +48,7 @@
   description: >
     This 3-D scroll-driven map was a really fun project to work on. The basic framework of a slippy 3-D tiled map was built when I joined the project, but I wrote a lot of the interaction, motion and rendering code and took over the project as the lead developer partway through.
   date: 2018-10-17
-  img: img/borderline.png
+  img: img/borderline.jpg
   url: https://www.washingtonpost.com/graphics/2018/national/us-mexico-border-flyover
 
 - headline: >
@@ -56,7 +56,7 @@
   description: >
     All thanks to Adam Pearce for <a href="https://roadtolarissa.com/hurricane/">this great tutorial</a>, which was helpful despite the unique wrinkles I ran into while building this rainfall map on a very tight deadline. It updated live as the hurricane passed through.
   date: 2018-09-14
-  img: img/rainfall.png
+  img: img/rainfall.jpg
   url: https://www.washingtonpost.com/graphics/2018/national/hurricane-florence-hits-carolina-coast
 
 - headline: >
@@ -64,7 +64,7 @@
   description: >
     Gabriel Florit and I created these 3-D home run arc plots in Blender. It was a fun exercise and we made animated versions for social media that I tweeted during the Derby.
   date: 2018-07-16
-  img: img/derby.png
+  img: img/derby.jpg
   url: https://www.washingtonpost.com/graphics/2018/sports/home-run-derby-lineup
 
 - headline: >
@@ -96,7 +96,7 @@
   description: >
     This scatter plot was made with the vector mapping library Tangram — a quick way to render a large number of data points.
   date: 2017-11-02
-  img: img/pitch-scatter.png
+  img: img/pitch-scatter.jpg
   url: http://www.latimes.com/projects/la-sp-dodgers-strikeouts/
 
 - headline: >
@@ -104,7 +104,7 @@
   description: >
     Using Landsat imagery, I showed how fire-stricken regions of California had started the year lush and green but dried out by the autumn.
   date: 2017-10-13
-  img: img/fires-sat.png
+  img: img/fires-sat.jpg
   url: http://www.latimes.com/projects/la-me-california-fire-seasons/
 
 - headline: >
@@ -112,7 +112,7 @@
   description: >
     We used data analysis to come up with strategies for riding the best rides at Disneyland without waiting forever in line, then went to Disneyland and tested them out. I created CSS-only charts for each ride using Django templating.
   date: 2017-07-12
-  img: img/disneyland.png
+  img: img/disneyland.jpg
   url: http://www.latimes.com/disneyland
 
 - headline: >
@@ -120,7 +120,7 @@
   description: >
     For this project, I created a 3-D model of Griffith Park using USGS and NOAA data and animated it to show the mountain lion's movement throughout the story.
   date: 2017-02-08
-  img: img/p22.png
+  img: img/p22.jpg
   url: http://www.latimes.com/projects/la-me-griffith-park-mountain-lion/
   
 - headline: >
@@ -128,7 +128,7 @@
   description: >
     Months of data collection went into this project, which was the most comprehensive election results map available for California after the November 2016 election.
   date: 2016-11-10
-  img: img/election.png
+  img: img/election.jpg
   url: http://www.latimes.com/projects/la-pol-ca-california-neighborhood-election-results/
 
 - headline: >
@@ -144,7 +144,7 @@
   description: >
     I wanted to show what it's like for a batter to face one of baseball's greatest pitchers, so I created a 3-D visualization of real Clayton Kershaw pitches from the first half of the 2016 season (this was published at midseason).
   date: 2016-07-11
-  img: img/kershaw.png
+  img: img/kershaw.jpg
   url: http://www.latimes.com/projects/la-sp-kershaw-2016-pitch-by-pitch/
 
 - headline: >
@@ -152,7 +152,7 @@
   description: >
     We plotted every shot Kobe Bryant took from the floor in his 20 years in the NBA. Some of this project's code is <a href="https://github.com/datadesk/kobe-every-shot-ever">on GitHub.</a>
   date: 2016-04-14
-  img: img/kobe.png
+  img: img/kobe.jpg
   url: http://graphics.latimes.com/kobe-every-shot-ever/
 
 - headline: >
