@@ -10,4 +10,4 @@ app.config.from_pyfile('settings.py')
 # pages = FlatPages(app)
 freezer = Freezer(app)
 
-projects = yaml.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'data/projects.yaml')))
+projects = yaml.safe_load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'data/projects.yaml')))
